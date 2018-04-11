@@ -444,6 +444,8 @@ class Client implements ClientInterface
         }
         curl_close($curl);
 
+        $this->responseCode = $responseCode;
+
         if ($response['body']) {
             return $response['body'];
         }
